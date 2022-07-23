@@ -4,7 +4,6 @@ import movieApi from "../../services/api/apiBaseInstance";
 import axios from "axios";
 import { IMAGE_URL, APP_URL } from "../../services/api/constants";
 
-
 const initialState = {
   movieList: [],
   filteredMovieList: [],
@@ -20,7 +19,7 @@ export const fetchAsyncMovies = createAsyncThunk(
     const { totalNumberOfMovies, movieList } = thunkAPI.getState().movies;
     // console.log('totalNumberOfMovies, movieList  :>> ', totalNumberOfMovies, movieList.length);
 
-    if (movieList?.length <= totalNumberOfMovies) {
+    if (movieList?.length <= totalNumberOfMovies && pageNumber <= 3) {
       if (typeof cancelToken != typeof undefined) {
         cancelToken.cancel("Operation canceled due to new request.");
       }
