@@ -2,6 +2,8 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 // import movieApi from "../../apis/movieApi";
 import movieApi from "../../services/api/apiBaseInstance";
 import axios from "axios";
+import { IMAGE_URL, APP_URL } from "../../services/api/constants";
+
 
 const initialState = {
   movieList: [],
@@ -25,7 +27,7 @@ export const fetchAsyncMovies = createAsyncThunk(
       cancelToken = axios.CancelToken.source();
 
       const response = await movieApi
-        .get(`mocks/CONTENTLISTINGPAGE-PAGE${pageNumber}.json`, {
+        .get(`${APP_URL}mocks/CONTENTLISTINGPAGE-PAGE${pageNumber}.json`, {
           cancelToken: cancelToken.token,
         })
         .catch((err) => console.log("Err :", err));
