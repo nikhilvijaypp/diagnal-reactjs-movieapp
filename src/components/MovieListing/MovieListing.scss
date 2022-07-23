@@ -1,0 +1,42 @@
+@import "../../common/colors.scss";
+
+.movie-list {
+  // margin: 20px 0px;
+  margin: 5px 0px;
+  h2 {
+    color: $font-secondary;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .movie-container {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 15px;
+  }
+
+  .movie-error {
+    color: red;
+    display: flex;
+    width: 100vw;
+    justify-content: start;
+    align-items: center;
+    i {
+      font-size: xxx-large;
+      margin-right: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .movie-container {
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .movie-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}

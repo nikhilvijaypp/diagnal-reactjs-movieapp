@@ -1,0 +1,46 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  filterMovies,
+  setSearchTerm,
+  getsearchTerm,
+} from "../../features/Movies/movieSlice";
+
+import "./Header.scss";
+
+function Header() {
+  const dispatch = useDispatch();
+  const searchTerm = useSelector(getsearchTerm);
+
+  return (
+    <div className="header">
+      <Link to="/">
+        <div className="logo">
+          <img src="/assets/images/Back.png" alt="back" />
+          <span>Romantic Comedy</span>
+        </div>
+      </Link>
+
+      <div className="seach-bar">
+        <form action="">
+          <input
+            type="search"
+            required
+            onChange={(e) => {
+              dispatch(setSearchTerm(e.target.value));
+              dispatch(filterMovies(e.target.value));
+            }}
+            value={searchTerm}
+          />
+          <span>
+            <i className="fa fa-search"></i>
+          </span>
+         
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default Header;
