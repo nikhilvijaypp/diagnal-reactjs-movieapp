@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   filterMovies,
@@ -17,12 +16,10 @@ function Header() {
 
   return (
     <div className="header">
-      <Link to="/">
         <div className="logo">
           <img src={`${APP_URL}assets/images/Back.png`} alt="back" />
           <span>Romantic Comedy</span>
         </div>
-      </Link>
 
       <div className="seach-bar">
         <form action="">

@@ -1,6 +1,5 @@
 import React from "react";
 import "./MovieCard.scss";
-import { Link } from "react-router-dom";
 import fallBackImg from "../../assets/images/placeholder_for_missing_posters.png";
 import { IMAGE_URL, APP_URL } from "../../services/api/constants";
 
@@ -8,7 +7,6 @@ function MovieCard(props) {
   const { data } = props;
 
   return (
-    <Link to="/">
       <div className="card-item">
         <div className="card-innner">
           <div className="card-top">
@@ -30,7 +28,6 @@ function MovieCard(props) {
           </div>
         </div>
       </div>
-    </Link>
   );
 }
 
