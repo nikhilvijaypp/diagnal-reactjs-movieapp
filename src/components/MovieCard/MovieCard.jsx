@@ -15,8 +15,7 @@ function MovieCard(props) {
             {/* <img src={`/assets/images/${data.posterImage}`} alt={data.name} /> */}
             <img
               // src={`/assets/images/${data.posterImage}`}
-              // src={`${IMAGE_URL}${data.posterImage}`}
-              src={`https://nikhilvijaypp.github.io/diagnal-reactjs-movieapp/assets/images/${data.posterImage}`}
+              src={`${IMAGE_URL}${data.posterImage}`}
               alt={data.name}
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null; // prevents looping
