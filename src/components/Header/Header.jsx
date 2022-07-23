@@ -6,6 +6,8 @@ import {
   setSearchTerm,
   getsearchTerm,
 } from "../../features/Movies/movieSlice";
+import { IMAGE_URL, APP_URL } from "../../services/api/constants";
+
 
 import "./Header.scss";
 
@@ -17,7 +19,7 @@ function Header() {
     <div className="header">
       <Link to="/">
         <div className="logo">
-          <img src="/assets/images/Back.png" alt="back" />
+          <img src={`${APP_URL}assets/images/Back.png`} alt="back" />
           <span>Romantic Comedy</span>
         </div>
       </Link>

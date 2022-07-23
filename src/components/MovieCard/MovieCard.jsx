@@ -14,8 +14,8 @@ function MovieCard(props) {
           <div className="card-top">
             {/* <img src={`/assets/images/${data.posterImage}`} alt={data.name} /> */}
             <img
-              // src={`/assets/images/${data.posterImage}`}
-              src={`${IMAGE_URL}${data.posterImage}`}
+              src={`${APP_URL}assets/images/${data.posterImage}`}
+              // src={`${IMAGE_URL}${data.posterImage}`}
               alt={data.name}
               onError={({ currentTarget }) => {
                 currentTarget.onerror = null; // prevents looping
