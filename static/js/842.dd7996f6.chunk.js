@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkdg_movie_app=self.webpackChunkdg_movie_app||[]).push([[842],{7842:function(e,n,a){a.r(n);var s=a(2791),i=a(184),u=s.lazy((function(){return a.e(350).then(a.bind(a,1350))}));n.default=function(){return(0,i.jsxs)("div",{className:"home",children:[(0,i.jsx)("div",{className:"banner-image"}),(0,i.jsx)(u,{})]})}}}]);
+//# sourceMappingURL=842.dd7996f6.chunk.js.map
